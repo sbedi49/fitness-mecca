@@ -30,6 +30,7 @@
   min-width: 100vw;
   background-color: white;
   position: relative;
+  overflow: hidden;
 }
 
 .header-container {
@@ -41,28 +42,38 @@
 
 .navbar {
   width: 100%;
-  z-index: 1;
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3rem;
+}
+
+.brand {
+  width: 4rem;
+  border-radius: 50%;
+  margin-right: auto;
+  height: 4rem;
 }
 
 .navbar__list {
   display: flex;
   padding: 3rem;
   align-items: center;
-  flex: 1;
   list-style: none;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 100%;
 }
 
-li > a {
+.nav-link {
   text-decoration: none;
   color: black;
   font-size: 1.6rem;
   transition: all 0.2s;
 }
 
-li > a:hover {
+.nav-link:hover {
   background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
   padding: 1.2rem;
 }
 
@@ -71,7 +82,7 @@ li > a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 15rem;
+  margin-top: 5rem;
 }
 
 .title__text {
@@ -120,6 +131,19 @@ li > a:hover {
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
 }
 
+@media only screen and (max-width: 768px) {
+  .buttons {
+    align-self: center;
+  }
+  .btn {
+    width: 13rem;
+    height: 6rem;
+  }
+  .btn > a {
+    font-size: 2px;
+  }
+}
+
 .btn.apple > svg {
   height: 7rem;
   width: 7rem;
@@ -151,6 +175,27 @@ a > span {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 2rem;
+}
+
+@media only screen and (max-width: 768px) {
+  #bg {
+    display: none;
+  }
+
+  .hero-img {
+    width: 4rem;
+  }
+
+  .title__text > h1 {
+    font-size: 6rem;
+    text-align: center;
+  }
+
+  .title__text > p {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+  }
 }
 
 /* END HEADER SECTION */
@@ -199,6 +244,7 @@ a > span {
 
 .about-img1 {
   width: 100%;
+  align-self: stretch;
   object-fit: cover;
 }
 .about-img2 {
@@ -208,7 +254,19 @@ a > span {
 
 .about-img3 {
   width: 100%;
+  align-self: stretch;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 768px) {
+  .about-header {
+    font-size: 5rem;
+  }
+
+  .about-text {
+    font-size: 2rem;
+    padding: 2rem;
+  }
 }
 
 /* END ABOUT SECTION */
@@ -224,7 +282,7 @@ a > span {
       rgba(0, 0, 0, 0.6),
       rgba(0, 0, 0, 0.6)
     ),
-    url(./img/about2.jpg);
+    url(./img/feature.jpg);
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -319,7 +377,8 @@ a > span {
 }
 
 .faq-card h4 {
-  font-size: 3rem;
+  font-size: 2rem;
+  text-align: center;
 }
 
 .faq-card p {
@@ -372,25 +431,101 @@ a > span {
   cursor: pointer;
 }
 
+@media only screen and (max-width: 768px) {
+  .faq-btn > button {
+    font-size: 2rem;
+    border: 2px solid white;
+  }
+}
+
 /* END APP SECTION */
 
 /* FOOTER SECTION */
 .footer {
   height: 30vh;
-  background-color: #e5e5e5;
+  background-color: white;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 4rem;
 }
 
 .footer-text {
   padding: 5rem;
   width: 100%;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  margin-top: 3rem;
+  margin-top: 15rem;
+  font-weight: 600;
+}
+.footer-logo > img {
+  height: 8rem;
+  width: 8rem;
+  border-radius: 50%;
 }
 
+.footer-info > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer-info > ul > li {
+  margin: 0.8rem;
+  transition: all 0.2s;
+}
+
+.footer-info > ul > li:hover {
+  transform: translateY(-2px);
+  color: #faae57;
+}
+
+.footer-link {
+  font-size: 1.5rem;
+  color: black;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.footer-link:hover {
+  color: #faae57;
+}
+
+.footer-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.socials {
+  fill: black;
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 3rem;
+  transition: all 0.2s;
+}
+
+.socials:hover {
+  fill: #faae57;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.copyright {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20rem;
+  }
+}
 /* END FOOTER SECTION */

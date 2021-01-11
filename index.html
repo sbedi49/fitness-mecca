@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Fitness Mecca</title>
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png" />
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   </head>
@@ -13,12 +14,13 @@
       <img class="hero-img" src="./img/hero.png" alt="Fitness Model" />
       <div class="header-container">
         <nav class="navbar">
+          <img class="brand" src="./img/logo.png" alt="logo" />
           <ul class="navbar__list">
-            <li><a href="#">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#faqs">FAQs</a></li>
-            <li><a href="#contact">Contact Us</a></li>
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#about">About</a></li>
+            <li><a class="nav-link" href="#features">Features</a></li>
+            <li><a class="nav-link" href="#faqs">FAQs</a></li>
+            <li><a class="nav-link" href="#contact">Contact Us</a></li>
           </ul>
         </nav>
         <div class="title">
@@ -148,13 +150,35 @@
 
     <section id="contact" class="footer">
       <div class="footer-text">
-        <div class="footer-logo">img</div>
-        <div class="footer-info">
-          <h5>info</h5>
+        <div class="footer-logo">
+          <img src="./img/logo.png" alt="logo" />
         </div>
-        <div class="footer-menu">menu</div>
+
+        <div class="footer-menu">
+          <svg class="socials">
+            <use xlink:href="img/sprite.svg#icon-twitter"></use>
+          </svg>
+          <svg class="socials">
+            <use xlink:href="img/sprite.svg#icon-youtube"></use>
+          </svg>
+          <svg class="socials">
+            <use xlink:href="img/sprite.svg#icon-instagram"></use>
+          </svg>
+          <svg class="socials">
+            <use xlink:href="img/sprite.svg#icon-facebook2"></use>
+          </svg>
+        </div>
+        <div class="footer-info">
+          <ul>
+            <li><a class="footer-link" href="#contact">About Us</a></li>
+            <li><a class="footer-link" href="#contact">Faqs</a></li>
+            <li><a class="footer-link" href="#contact">Blog</a></li>
+            <li><a class="footer-link" href="#contact">Privacy Policy</a></li>
+            <li><a class="footer-link" href="#contact">Careers</a></li>
+          </ul>
+        </div>
       </div>
-      <p>copyright</p>
+      <p class="copyright">&copy; Fitness Mecca</p>
     </section>
 
     <script src="index.js"></script>
