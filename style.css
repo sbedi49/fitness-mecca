@@ -87,7 +87,7 @@ li:hover {
 }
 
 .nav-link:hover {
-  color: red;
+  color: black;
 }
 
 .title {
@@ -133,7 +133,7 @@ li:hover {
 }
 
 .btn {
-  width: 20rem;
+  width: min-content;
   height: 6rem;
   margin-top: 8rem;
   margin-right: 3rem;
@@ -202,19 +202,16 @@ menu {
   }
 }
 
-.btn.apple > svg {
-  height: 7rem;
-  width: 7rem;
-}
-
 .btn.google > svg {
   fill: #78c257;
+  height: 4rem;
+  width: 4rem;
 }
 
 .btn > svg {
-  height: 5rem;
+  height: 4rem;
   margin-top: 0.5rem;
-  width: 5rem;
+  width: 4rem;
   fill: white;
   margin: 1rem;
 }
@@ -222,17 +219,9 @@ menu {
 .btn > a {
   text-decoration: none;
   color: white;
-  font-size: 0.1rem;
-  text-transform: inherit;
-}
-
-a > span {
-  line-height: 1;
-  margin-top: 1rem;
-  text-align: start;
+  font-size: 1.5rem;
+  font-weight: 800;
   text-transform: uppercase;
-  font-weight: 700;
-  font-size: 2rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -495,14 +484,13 @@ a > span {
 
 /* FOOTER SECTION */
 .footer {
-  height: 30vh;
+  height: max-content;
   background-color: white;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 4rem;
 }
 
 .footer-text {
@@ -511,7 +499,6 @@ a > span {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 15rem;
   font-weight: 600;
 }
 .footer-logo > img {
@@ -578,7 +565,6 @@ a > span {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 25rem;
   }
 }
 /* END FOOTER SECTION */
